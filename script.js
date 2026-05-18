@@ -1,4 +1,46 @@
-// 스킬 바 애니메이션
+// ===== 커스텀 커서 (손가락 모양) =====
+const cursor = document.getElementById('cursor');
+const cursorDot = document.getElementById('cursorDot');
+
+if (cursor && cursorDot) {
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    });
+
+    // 트레일 점 (지연 추적)
+    function animateDot() {
+        dotX += (mouseX - dotX) * 0.15;
+        dotY += (mouseY - dotY) * 0.15;
+        cursorDot.style.left = dotX + 'px';
+        cursorDot.style.top = dotY + 'px';
+        requestAnimationFrame(animateDot);
+    }
+    animateDot();
+
+    // 호버 가능한 요소에 커서 효과
+    document.querySelectorAll('a, button, .keyword-card, .exp-card, .nav-link').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+            cursorDot.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+            cursorDot.classList.remove('hover');
+        });
+    });
+
+    // 클릭 효과
+    document.addEventListener('mousedown', () => cursor.classList.add('click'));
+    document.addEventListener('mouseup', () => cursor.classList.remove('click'));
+}
+
+// ===== 스킬 바 애니메이션 =====
 const observerOptions = {
     threshold: 0.3
 };
