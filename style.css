@@ -2,7 +2,7 @@
     --navy: #0A1628;
     --orange: #FF6B35;
     --ivory: #F5F1EA;
-    --ink: #2C2C2C;
+    --ink: #262626;
     --gray: #6B6B6B;
     --line: #D8D2C4;
     --cursor-fill: #FF6B35;
@@ -652,6 +652,10 @@ body {
 .exp-card.mint {
     background: #C8E6E0;
     color: #1B5E56;
+}
+
+.exp-card.mint::before {
+    background: #1B5E56 !important;
 }
 
 .exp-card.mint .exp-title {
