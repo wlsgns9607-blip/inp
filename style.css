@@ -1499,13 +1499,21 @@ footer {
     justify-content: space-between;
 }
 
-/* Detailing Carwash Card Background */
+/* Detailing Carwash Card Background & Border */
 .exp-cell-wrap .exp-card[data-modal-id="디테일링 세차"] {
     background-color: #EAFAF6 !important;
+    border-color: #13B89F !important;
 }
 
 .exp-cell-wrap .exp-card[data-modal-id="디테일링 세차"]:hover {
     background-color: #dbf7f1 !important;
+    border-color: #13B89F !important;
+    box-shadow: 0 8px 24px rgba(19, 184, 159, 0.15) !important;
+}
+
+/* Detailing Carwash Title Color */
+.exp-cell-wrap .exp-card[data-modal-id="디테일링 세차"] .exp-title {
+    color: #13B89F !important;
 }
 
 /* Gourmet Card Background */
