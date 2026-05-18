@@ -291,6 +291,3 @@ document.querySelectorAll('img[loading="lazy"]').forEach(img => {
         });
     }
 });
-
-
-
