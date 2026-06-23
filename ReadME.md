@@ -4,8 +4,7 @@
 
 ### 단단한 기획자, 조진훈
 
-**정교한 페르소나 분석과 서비스 기획력을 바탕으로,  
-이유 있는 화면을 설계하는 신입 UI/UX 디자이너**
+**현장의 데이터와 정교한 페르소나 분석을 바탕으로, 사용자의 불편함을 찾아내어 끝없이 '개선'을 설계하는 UX 기획자**
 
 ![Portfolio](https://img.shields.io/badge/PORTFOLIO-2026-FF6B35?style=for-the-badge)
 ![Status](https://img.shields.io/badge/STATUS-Open_to_Work-2EC4B6?style=for-the-badge)
