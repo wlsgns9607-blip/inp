@@ -547,18 +547,18 @@ body {
 .strength-list {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 12px;
 }
 
 .strength-item {
     display: grid;
-    grid-template-columns: 60px 1fr auto;
-    gap: 20px;
-    padding: 20px 24px;
+    grid-template-columns: 48px 1fr auto;
+    gap: 16px;
+    padding: 14px 20px;
     border-bottom: 1px solid var(--line);
     background: #FFC94D;
     border-radius: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 0;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     position: relative;
     overflow: hidden;
