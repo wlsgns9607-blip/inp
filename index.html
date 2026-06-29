@@ -133,7 +133,7 @@
                     <span class="skill-value">80</span>
                 </div>
                 <div class="skill-bar" data-skill="Figma" data-value="68">
-                    <span class="skill-name">Figma</span>
+                    <span class="skill-name">Figma(와이어프레임)</span>
                     <div class="skill-track"><div class="skill-fill"></div></div>
                     <span class="skill-value">68</span>
                 </div>
@@ -197,31 +197,39 @@
                         </linearGradient>
                     </defs>
                     <g fill="none" stroke="#D8D2C4" stroke-width="1">
-                        <polygon points="200,40 360,200 200,360 40,200"/>
-                        <polygon points="200,80 320,200 200,320 80,200"/>
-                        <polygon points="200,120 280,200 200,280 120,200"/>
+                        <!-- 6축 그리드 백그라운드 육각형 (Radius: 160, 120, 80) -->
+                        <polygon points="200,40 338.6,120 338.6,280 200,360 61.4,280 61.4,120"/>
+                        <polygon points="200,80 303.9,140 303.9,260 200,320 96.1,260 96.1,140"/>
+                        <polygon points="200,120 269.3,160 269.3,240 200,280 130.7,240 130.7,160"/>
                     </g>
                     <g stroke="#D8D2C4" stroke-width="1" stroke-dasharray="2 3">
+                        <!-- 6축 교차 대각선 -->
                         <line x1="200" y1="40" x2="200" y2="360"/>
-                        <line x1="40" y1="200" x2="360" y2="200"/>
+                        <line x1="338.6" y1="120" x2="61.4" y2="280"/>
+                        <line x1="338.6" y1="280" x2="61.4" y2="120"/>
                     </g>
                     <!-- 레이더 스캔 라인 -->
                     <g class="radar-scan-line">
                         <path d="M 200 200 L 360 200 A 160 160 0 0 0 200 40 Z" fill="url(#scanGradient)" opacity="0.4"/>
                     </g>
-                    <polygon points="200,72 333.6,200 200,320 70.4,200" fill="#FF6B35" fill-opacity="0.2" stroke="#FF6B35" stroke-width="2"/>
+                    <!-- 활성화된 강점 폴리곤 (01: 82%, 02: 80%, 03: 78%, 04: 75%, 05: 85%, 06: 83%) -->
+                    <polygon points="200,68.8 310.9,136 308.1,262.4 200,320 82.2,268 85.0,133.6" fill="#FF6B35" fill-opacity="0.2" stroke="#FF6B35" stroke-width="2"/>
                     <g fill="#FF6B35" class="radar-points">
-                        <circle cx="200" cy="72" r="5" class="radar-dot"/>
-                        <circle cx="333.6" cy="200" r="5" class="radar-dot"/>
+                        <circle cx="200" cy="68.8" r="5" class="radar-dot"/>
+                        <circle cx="310.9" cy="136" r="5" class="radar-dot"/>
+                        <circle cx="308.1" cy="262.4" r="5" class="radar-dot"/>
                         <circle cx="200" cy="320" r="5" class="radar-dot"/>
-                        <circle cx="70.4" cy="200" r="5" class="radar-dot"/>
+                        <circle cx="82.2" cy="268" r="5" class="radar-dot"/>
+                        <circle cx="85.0" cy="133.6" r="5" class="radar-dot"/>
                     </g>
-                    <!-- 레이더 수치 라벨 -->
-                    <g font-family="JetBrains Mono" font-size="14" fill="#FF6B35" font-weight="bold" text-anchor="middle">
-                        <text x="200" y="50">80%</text>
-                        <text x="360" y="210">82%</text>
-                        <text x="200" y="350">75%</text>
-                        <text x="40" y="210">78%</text>
+                    <!-- 레이더 수치 및 인덱스 라벨 -->
+                    <g font-family="JetBrains Mono" font-size="12" fill="#FF6B35" font-weight="bold">
+                        <text x="200" y="25" text-anchor="middle">01 / 82%</text>
+                        <text x="350" y="115" text-anchor="start">02 / 80%</text>
+                        <text x="350" y="285" text-anchor="start">03 / 78%</text>
+                        <text x="200" y="380" text-anchor="middle">04 / 75%</text>
+                        <text x="50" y="285" text-anchor="end">05 / 85% 🌟</text>
+                        <text x="50" y="115" text-anchor="end">06 / 83% 🌟</text>
                     </g>
                 </svg>
             </div>
@@ -246,6 +254,16 @@
                     <div class="strength-label">/ 04</div>
                     <div class="strength-name">문제 해결력<br>및 실행력</div>
                     <div class="strength-score">75%</div>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-label">/ 05</div>
+                    <div class="strength-name">비즈니스 모델(BM) 및<br>생태계 설계력</div>
+                    <div class="strength-score">85% 🌟</div>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-label">/ 06</div>
+                    <div class="strength-name">오프라인 공간 및<br>디테일 분석력</div>
+                    <div class="strength-score">83% 🌟</div>
                 </div>
             </div>
         </div>
