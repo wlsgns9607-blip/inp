@@ -73,6 +73,7 @@ const strengthObserver = new IntersectionObserver((entries) => {
             const strengthScores = entry.target.querySelectorAll('.strength-score');
             strengthScores.forEach((score, index) => {
                 const targetValue = parseInt(score.textContent);
+                const hasStar = score.textContent.includes('🌟');
                 let currentValue = 0;
                 
                 setTimeout(() => {
@@ -80,7 +81,7 @@ const strengthObserver = new IntersectionObserver((entries) => {
                         if (currentValue < targetValue) {
                             currentValue += Math.ceil((targetValue - currentValue) / 10);
                             if (currentValue > targetValue) currentValue = targetValue;
-                            score.textContent = currentValue + '%';
+                            score.textContent = currentValue + '%' + (hasStar ? ' 🌟' : '');
                         } else {
                             clearInterval(interval);
                         }
